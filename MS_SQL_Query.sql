@@ -16,7 +16,7 @@ create table Users(
 	Name		nvarchar(20)	not null,
 	Surname		nvarchar(20)	not null,
 	Nickname	nvarchar(20)	not null,
-	Picture_URL	nvarchar(max),
+	Picture_URL	nvarchar(max)	not null,
 		
 	Location	int			references Location(ID)
 )
@@ -30,15 +30,15 @@ create table Tweet(
 
 create table Hashtag(
 	ID			int				not null primary key identity,
-	Text		nvarchar(139)	not null
+	Text		nvarchar(139)	not null 
 )
 
 create table Comment(
 	ID			int				not null primary key identity,
 	Text		nvarchar(max)	not null,
 
-	Tweet		int				references Tweet(ID),
-	Author		int				references Users(ID)
+	Tweet		int				not null references Tweet(ID),
+	Author		int				not null references Users(ID)
 )
 
 create table FavouriteTweet(
@@ -48,8 +48,8 @@ create table FavouriteTweet(
 	Tweet			int			not null references Tweet(ID)
 )
 
-create table TweetHashtagConnection (
-	ID			int				not null primary key identity,
+create table TweetHashtagMapping (
 	Tweet	int					not null references Tweet(ID),
-	Hashtag	int					not null references Hashtag(ID)
+	Hashtag	int					not null references Hashtag(ID),
+	primary key (Tweet,Hashtag)
 )
