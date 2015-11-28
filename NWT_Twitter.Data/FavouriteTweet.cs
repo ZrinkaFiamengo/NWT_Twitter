@@ -14,7 +14,7 @@ namespace NWT_Twitter.Data
     
     public partial class FavouriteTweet
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public int User_favourite { get; set; }
         public int Tweet { get; set; }
     

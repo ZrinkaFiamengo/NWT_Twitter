@@ -19,7 +19,7 @@ namespace NWT_Twitter.Data
         {
             this.Comments = new HashSet<Comment>();
             this.FavouriteTweets = new HashSet<FavouriteTweet>();
-            this.TweetHashtagConnections = new HashSet<TweetHashtagConnection>();
+            this.Hashtags = new HashSet<Hashtag>();
         }
     
         public int ID { get; set; }
@@ -32,6 +32,6 @@ namespace NWT_Twitter.Data
         public virtual ICollection<FavouriteTweet> FavouriteTweets { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TweetHashtagConnection> TweetHashtagConnections { get; set; }
+        public virtual ICollection<Hashtag> Hashtags { get; set; }
     }
 }

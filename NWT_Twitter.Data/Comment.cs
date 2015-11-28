@@ -16,8 +16,8 @@ namespace NWT_Twitter.Data
     {
         public int ID { get; set; }
         public string Text { get; set; }
-        public Nullable<int> Tweet { get; set; }
-        public Nullable<int> Author { get; set; }
+        public int Tweet { get; set; }
+        public int Author { get; set; }
     
         public virtual User User { get; set; }
         public virtual Tweet Tweet1 { get; set; }

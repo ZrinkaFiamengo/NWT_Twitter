@@ -17,13 +17,13 @@ namespace NWT_Twitter.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Hashtag()
         {
-            this.TweetHashtagConnections = new HashSet<TweetHashtagConnection>();
+            this.Tweets = new HashSet<Tweet>();
         }
     
         public int ID { get; set; }
         public string Text { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TweetHashtagConnection> TweetHashtagConnections { get; set; }
+        public virtual ICollection<Tweet> Tweets { get; set; }
     }
 }

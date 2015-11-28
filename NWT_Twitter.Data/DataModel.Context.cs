@@ -30,7 +30,6 @@ namespace NWT_Twitter.Data
         public virtual DbSet<Hashtag> Hashtags { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<Tweet> Tweets { get; set; }
-        public virtual DbSet<TweetHashtagConnection> TweetHashtagConnections { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }
