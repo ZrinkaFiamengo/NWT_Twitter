@@ -60,5 +60,21 @@ namespace NWT_Twitter.Data.Repositories
                 }
             }
         }
+
+        public void Delete(int id)
+        {
+            using (var context = new TwitterEntities())
+            {
+                var tweet = context.Tweets.SingleOrDefault(t => t.ID == id);
+                if (tweet != null)
+                {
+                    context.Comments.RemoveRange(tweet.Comments);
+                    context.FavouriteTweets.RemoveRange(tweet.FavouriteTweets);
+                    context.Tweets.Remove(tweet);
+
+                    context.SaveChanges();
+                }
+            }
+        }
     }
 }
