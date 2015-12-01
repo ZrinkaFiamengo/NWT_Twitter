@@ -173,9 +173,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mappers\CommentMapper.cs" />
     <Compile Include="Mappers\TweetMapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Data\Comment.cs" />
     <Compile Include="Models\Data\Tweet.cs" />
     <Compile Include="Models\Data\User.cs" />
     <Compile Include="Models\IdentityModels.cs" />
