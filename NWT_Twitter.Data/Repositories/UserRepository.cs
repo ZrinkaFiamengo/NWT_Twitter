@@ -45,6 +45,8 @@ namespace NWT_Twitter.Data.Repositories
                     existingUser.Nickname = user.Nickname;
                     existingUser.Location1 = user.Location1;
                     existingUser.Picture_URL = user.Picture_URL;
+                    existingUser.FollowedBy = user.FollowedBy;
+                    existingUser.Following = user.Following;
 
                     context.SaveChanges();
                 }

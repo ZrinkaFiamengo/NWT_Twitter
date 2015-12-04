@@ -20,6 +20,8 @@ namespace NWT_Twitter.Data
             this.Comments = new HashSet<Comment>();
             this.FavouriteTweets = new HashSet<FavouriteTweet>();
             this.Tweets = new HashSet<Tweet>();
+            this.Following = new HashSet<User>();
+            this.FollowedBy = new HashSet<User>();
         }
     
         public int Id { get; set; }
@@ -36,5 +38,9 @@ namespace NWT_Twitter.Data
         public virtual Location Location1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tweet> Tweets { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Following { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> FollowedBy { get; set; }
     }
 }

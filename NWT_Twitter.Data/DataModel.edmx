@@ -54,6 +54,14 @@
           <Property Name="Tweet" Type="int" Nullable="false" />
           <Property Name="Hashtag" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="UserFollowsUser">
+          <Key>
+            <PropertyRef Name="User_followed" />
+            <PropertyRef Name="User_follower" />
+          </Key>
+          <Property Name="User_followed" Type="int" Nullable="false" />
+          <Property Name="User_follower" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="Id" />
@@ -149,6 +157,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__UserFollo__User___3A81B327">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="UserFollowsUser" Type="Self.UserFollowsUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserFollowsUser">
+              <PropertyRef Name="User_followed" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserFollo__User___3B75D760">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="UserFollowsUser" Type="Self.UserFollowsUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserFollowsUser">
+              <PropertyRef Name="User_follower" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Users__Location__1273C1CD">
           <End Role="Location" Type="Self.Location" Multiplicity="0..1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
@@ -168,6 +200,7 @@
           <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tweet" EntityType="Self.Tweet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TweetHashtagMapping" EntityType="Self.TweetHashtagMapping" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserFollowsUser" EntityType="Self.UserFollowsUser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Comment__Author__1B0907CE" Association="Self.FK__Comment__Author__1B0907CE">
             <End Role="Users" EntitySet="Users" />
@@ -196,6 +229,14 @@
           <AssociationSet Name="FK__TweetHash__Tweet__21B6055D" Association="Self.FK__TweetHash__Tweet__21B6055D">
             <End Role="Tweet" EntitySet="Tweet" />
             <End Role="TweetHashtagMapping" EntitySet="TweetHashtagMapping" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserFollo__User___3A81B327" Association="Self.FK__UserFollo__User___3A81B327">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserFollowsUser" EntitySet="UserFollowsUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserFollo__User___3B75D760" Association="Self.FK__UserFollo__User___3B75D760">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserFollowsUser" EntitySet="UserFollowsUser" />
           </AssociationSet>
           <AssociationSet Name="FK__Users__Location__1273C1CD" Association="Self.FK__Users__Location__1273C1CD">
             <End Role="Location" EntitySet="Location" />
@@ -272,6 +313,8 @@
           <NavigationProperty Name="FavouriteTweets" Relationship="Self.FK__Favourite__User___1DE57479" FromRole="Users" ToRole="FavouriteTweet" />
           <NavigationProperty Name="Location1" Relationship="Self.FK__Users__Location__1273C1CD" FromRole="Users" ToRole="Location" />
           <NavigationProperty Name="Tweets" Relationship="Self.FK__Tweet__Author__15502E78" FromRole="Users" ToRole="Tweet" />
+          <NavigationProperty Name="Following" Relationship="Self.UserFollowsUser" FromRole="Users" ToRole="Users1" />
+          <NavigationProperty Name="FollowedBy" Relationship="Self.UserFollowsUser" FromRole="Users1" ToRole="Users" />
         </EntityType>
         <Association Name="FK__Comment__Author__1B0907CE">
           <End Role="Users" Type="Self.User" Multiplicity="1" />
@@ -349,6 +392,10 @@
           <End Role="Hashtag" Type="Self.Hashtag" Multiplicity="*" />
           <End Role="Tweet" Type="Self.Tweet" Multiplicity="*" />
         </Association>
+        <Association Name="UserFollowsUser">
+          <End Role="Users" Type="Self.User" Multiplicity="*" />
+          <End Role="Users1" Type="Self.User" Multiplicity="*" />
+        </Association>
         <EntityContainer Name="TwitterEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="FavouriteTweets" EntityType="Self.FavouriteTweet" />
@@ -383,6 +430,10 @@
           <AssociationSet Name="TweetHashtagMapping" Association="Self.TweetHashtagMapping">
             <End Role="Hashtag" EntitySet="Hashtags" />
             <End Role="Tweet" EntitySet="Tweets" />
+          </AssociationSet>
+          <AssociationSet Name="UserFollowsUser" Association="Self.UserFollowsUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Users1" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -455,6 +506,14 @@
             </EndProperty>
             <EndProperty Name="Tweet">
               <ScalarProperty Name="ID" ColumnName="Tweet" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="UserFollowsUser" TypeName="TwitterModel.UserFollowsUser" StoreEntitySet="UserFollowsUser">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="Id" ColumnName="User_followed" />
+            </EndProperty>
+            <EndProperty Name="Users1">
+              <ScalarProperty Name="Id" ColumnName="User_follower" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>
