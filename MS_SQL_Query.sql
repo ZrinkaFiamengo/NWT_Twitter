@@ -53,3 +53,10 @@ create table TweetHashtagMapping (
 	Hashtag	int					not null references Hashtag(ID),
 	primary key (Tweet,Hashtag)
 )
+
+create table UserFollowsUser(
+	Follower int not null references Users(Id),
+	Followed int not null references Users(Id),
+
+	primary key(Follower,Followed)
+)
