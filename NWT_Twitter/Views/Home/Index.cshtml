@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Index";
 }
-
+@Html.Partial("_LoginPartial")
 <main>
     <aside id="user-panel-container">
-        
-        @Html.Partial("~/Views/Shared/_UserInfo.cshtml");
+
+        @Html.Partial("_UserInfo");
 
         @Html.Partial("~/Views/Shared/_Trends.cshtml");
     </aside>

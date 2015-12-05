@@ -8,11 +8,13 @@ namespace Nwt_Twitter.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
 
+        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,18 +22,21 @@ namespace Nwt_Twitter.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Profile()
         {
 
             return View();
         }
 
+        [Authorize]
         public ActionResult Following()
         {
 
             return View();
         }
 
+        [Authorize]
         public ActionResult Favourites()
         {
 
