@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace NWT_Twitter.Controllers
+namespace Nwt_Twitter.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,9 +20,20 @@ namespace NWT_Twitter.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Profile()
         {
-            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Following()
+        {
+
+            return View();
+        }
+
+        public ActionResult Favourites()
+        {
 
             return View();
         }

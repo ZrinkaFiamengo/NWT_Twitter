@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "Following";
+}
+
+<main>
+    <aside id="user-panel-container">
+        <div class="panel panel-default user-panel">
+            <img src="~/Content/Users/User1.png" id="user-panel-user-image" alt="user picture" />
+            <a class="hidden-xs" src="#"> <label id="user-panel-user-name">Ime Prezime</label><br/></a>
+            <a class="hidden-xs" src="#"> <span id="user-panel-nickname">@@Nickname</span><br/></a>
+            <ul class="hidden-xs nav navbar-nav">
+                <li class="user-container-info">
+                    TWEETS <br/>
+                    <label>5</label>
+                </li>
+                <li class="user-container-info">
+                    FOLLOWING<br/>
+                    <label>20</label>
+                </li>
+             </ul>
+        </div>
+
+        <div class="panel panel-default hidden-xs ">
+            <label id="trends-label">Trends</label>
+            <ul id="trends-list">
+                <li><a src="#">#hashtag_trend1</a></li>
+                <li><a src="#">#hashtag_trend2</a></li>
+                <li><a src="#">#hashtag_trend3</a></li>
+                <li><a src="#">#hashtag_trend4</a></li>
+                <li><a src="#">#hashtag_trend5</a></li>
+            </ul>
+        </div>
+    </aside>
+    <div id="main-content-container" class="panel">
+        <h3>Users you followed</h3><br/>
+
+        <div class="panel panel-default users">
+            <img src="~/Content/Users/User2.png" class="users-image" alt="user picture" />
+            <a src="#"> <label class="users-name">Ime Prezime</label><br/></a>
+            <a src="#"> <span class="users-nickname">@@Nickname</span><br/></a>
+            <ul class="nav navbar-nav">
+                <li class="users-info">
+                    TWEETS <br/>
+                    <label>5</label>
+                </li>
+                <li class="users-info">
+                    FOLLOWING<br/>
+                    <label>20</label>
+                    </span>
+                </li>
+            </ul>
+            <button class="btn button pull-right btn-warning edit-profile">Unfollow</button>
+        </div>
+
+        <div class="panel panel-default users">
+            <img src="~/Content/Users/User3.png" class="users-image" alt="user picture" />
+            <a src="#"> <label class="users-name">Ime Prezime</label><br/></a>
+            <a src="#"> <span class="users-nickname">@@Nickname</span><br/></a>
+            <ul class="nav navbar-nav">
+                <li class="users-info">
+                    TWEETS <br/>
+                    <label>5</label>
+                </li>
+                <li class="users-info">
+                    FOLLOWING<br/>
+                    <label>20</label>
+                    </span>
+                </li>
+            </ul>
+            <button class="btn button pull-right btn-warning edit-profile">Unfollow</button>
+        </div>
+
+        <hr>
+        <h3>Other Users</h3><br/>
+
+        <div class="panel panel-default users">
+            <img src="~/Content/Users/User2.png" class="users-image" alt="user picture" />
+            <a src="#"> <label class="users-name">Ime Prezime</label><br/></a>
+            <a src="#"> <span class="users-nickname">@@Nickname</span><br/></a>
+            <ul class="nav navbar-nav">
+                <li class="users-info">
+                    TWEETS <br/>
+                    <label>5</label>
+                </li>
+                <li class="users-info">
+                    FOLLOWING<br/>
+                    <label>20</label>
+                    </span>
+                </li>
+            </ul>
+            <button class="btn button pull-right btn-success edit-profile">Follow</button>
+        </div>
+
+        <div class="panel panel-default users">
+            <img src="~/Content/Users/User4.png" class="users-image" alt="user picture" />
+            <a src="#"> <label class="users-name">Ime Prezime</label><br/></a>
+            <a src="#"> <span class="users-nickname">@@Nickname</span><br/></a>
+            <ul class="nav navbar-nav">
+                <li class="users-info">
+                    TWEETS <br/>
+                    <label>5</label>
+                </li>
+                <li class="users-info">
+                    FOLLOWING<br/>
+                    <label>20</label>
+                    </span>
+                </li>
+            </ul>
+            <button class="btn button pull-right btn-success edit-profile">Follow</button>
+        </div>
+    </div>
+
+
+</main>
+
