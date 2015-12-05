@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{015A359F-0096-4234-AADF-D60E69FA98CA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>NWT_Twitter</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="NWT_Twitter\Content\bootstrap-theme.css" />
+    <Content Include="NWT_Twitter\Content\bootstrap-theme.min.css" />
+    <Content Include="NWT_Twitter\Content\bootstrap.css" />
+    <Content Include="NWT_Twitter\Content\bootstrap.min.css" />
+    <Content Include="NWT_Twitter\Content\Site.css" />
+    <Content Include="NWT_Twitter\favicon.ico" />
+    <Content Include="NWT_Twitter\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="NWT_Twitter\Global.asax" />
+    <Content Include="NWT_Twitter\NWT_Twitter.csproj" />
+    <Content Include="NWT_Twitter\Project_Readme.html" />
+    <Content Include="NWT_Twitter\Scripts\bootstrap.js" />
+    <Content Include="NWT_Twitter\Scripts\bootstrap.min.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery-1.10.2.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery.validate.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery.validate.min.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="NWT_Twitter\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="NWT_Twitter\Scripts\modernizr-2.6.2.js" />
+    <Content Include="NWT_Twitter\Scripts\respond.js" />
+    <Content Include="NWT_Twitter\Scripts\respond.min.js" />
+    <Content Include="NWT_Twitter\Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NWT_Twitter\Content\bootstrap-theme.css.map" />
+    <None Include="NWT_Twitter\Content\bootstrap.css.map" />
+    <None Include="NWT_Twitter\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="NWT_Twitter\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="NWT_Twitter\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="NWT_Twitter\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="NWT_Twitter\packages.config" />
+    <None Include="NWT_Twitter\Scripts\jquery-1.10.2.min.map" />
+    <None Include="NWT_Twitter\Views\Account\ConfirmEmail.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\ExternalLoginFailure.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\ForgotPassword.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\Login.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\Register.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\ResetPassword.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\ResetPasswordConfirmation.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\SendCode.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\VerifyCode.cshtml" />
+    <None Include="NWT_Twitter\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <None Include="NWT_Twitter\Views\Home\About.cshtml" />
+    <None Include="NWT_Twitter\Views\Home\Contact.cshtml" />
+    <None Include="NWT_Twitter\Views\Home\Index.cshtml" />
+    <None Include="NWT_Twitter\Views\Manage\AddPhoneNumber.cshtml" />
+    <None Include="NWT_Twitter\Views\Manage\ChangePassword.cshtml" />
+    <None Include="NWT_Twitter\Views\Manage\Index.cshtml" />
+    <None Include="NWT_Twitter\Views\Manage\ManageLogins.cshtml" />
+    <None Include="NWT_Twitter\Views\Manage\SetPassword.cshtml" />
+    <None Include="NWT_Twitter\Views\Manage\VerifyPhoneNumber.cshtml" />
+    <None Include="NWT_Twitter\Views\Shared\Error.cshtml" />
+    <None Include="NWT_Twitter\Views\Shared\Lockout.cshtml" />
+    <None Include="NWT_Twitter\Views\Shared\_Layout.cshtml" />
+    <None Include="NWT_Twitter\Views\Shared\_LoginPartial.cshtml" />
+    <None Include="NWT_Twitter\Views\Web.config" />
+    <None Include="NWT_Twitter\Views\_ViewStart.cshtml" />
+    <None Include="NWT_Twitter\Web.config" />
+    <None Include="NWT_Twitter\Web.Debug.config" />
+    <None Include="NWT_Twitter\Web.Release.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NWT_Twitter\App_Start\BundleConfig.cs" />
+    <Compile Include="NWT_Twitter\App_Start\FilterConfig.cs" />
+    <Compile Include="NWT_Twitter\App_Start\IdentityConfig.cs" />
+    <Compile Include="NWT_Twitter\App_Start\RouteConfig.cs" />
+    <Compile Include="NWT_Twitter\App_Start\Startup.Auth.cs" />
+    <Compile Include="NWT_Twitter\Controllers\AccountController.cs" />
+    <Compile Include="NWT_Twitter\Controllers\HomeController.cs" />
+    <Compile Include="NWT_Twitter\Controllers\ManageController.cs" />
+    <Compile Include="NWT_Twitter\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NWT_Twitter\Models\AccountViewModels.cs" />
+    <Compile Include="NWT_Twitter\Models\IdentityModels.cs" />
+    <Compile Include="NWT_Twitter\Models\ManageViewModels.cs" />
+    <Compile Include="NWT_Twitter\Properties\AssemblyInfo.cs" />
+    <Compile Include="NWT_Twitter\Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
