@@ -73,16 +73,8 @@
 
     <aside id="user-panel-container" class="hidden-xs trends">
 
-        <div class="panel panel-default">
-            <label id="trends-label">Trends</label>
-            <ul id="trends-list">
-                <li><a src="#">#hashtag_trend1</a></li>
-                <li><a src="#">#hashtag_trend2</a></li>
-                <li><a src="#">#hashtag_trend3</a></li>
-                <li><a src="#">#hashtag_trend4</a></li>
-                <li><a src="#">#hashtag_trend5</a></li>
-            </ul>
-        </div>
+        @Html.Partial("~/Views/Shared/_Trends.cshtml");
+
     </aside>
 </main>
 
